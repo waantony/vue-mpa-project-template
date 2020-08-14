@@ -1,7 +1,7 @@
 {
-  "name": "vue-spa-project-template",
+  "name": "vue-mpa-project-template",
   "version": "0.1.0",
-  "description": "Vue 单页应用项目架构模版，基于：vue-cli@4, vue@2, vue-router@3, vuex@3, sass(scss), eslint, stylelint, babel, postcss-px2rem",
+  "description": "Vue 多页应用项目架构模版，基于：vue-cli@4, vue@2, vue-router@3, vuex@3, sass(scss), eslint, stylelint, babel, postcss-px2rem",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
