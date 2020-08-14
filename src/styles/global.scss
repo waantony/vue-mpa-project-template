@@ -1,0 +1,90 @@
+@import './mixins.scss';
+@import './variables.scss'; // 自定义变量
+
+// 本文件为全局样式配置
+
+// 全局 class 样式
+.flex-between {
+  @include flex();
+}
+.flex-around {
+  @include flex($justify: space-around);
+}
+.flex-start {
+  @include flex($justify: flex-start);
+}
+.flex-end {
+  @include flex($justify: flex-end);
+}
+.flex-center {
+  @include flex($justify: center);
+}
+
+// 元素交叉轴拉伸
+.flex-between-s {
+  @include flex();
+
+  align-items: stretch;
+}
+.flex-around-s {
+  @include flex($justify: space-around);
+
+  align-items: stretch;
+}
+.flex-start-s {
+  @include flex($justify: flex-start);
+
+  align-items: stretch;
+}
+.flex-end-s {
+  @include flex($justify: flex-end);
+
+  align-items: stretch;
+}
+.flex-center-s {
+  @include flex($justify: center);
+
+  align-items: stretch;
+}
+
+.flex-col-between {
+  @include flex($direction: column);
+}
+.flex-col-around {
+  @include flex($justify: space-around, $direction: column);
+}
+.flex-col-start {
+  @include flex($justify: flex-start, $direction: column);
+}
+.flex-col-end {
+  @include flex($justify: flex-end, $direction: column);
+}
+.flex-col-center {
+  @include flex($justify: center, $direction: column);
+}
+
+.flex-col-between-s {
+  @include flex($direction: column);
+
+  align-items: stretch;
+}
+.flex-col-around-s {
+  @include flex($justify: space-around, $direction: column);
+
+  align-items: stretch;
+}
+.flex-col-start-s {
+  @include flex($justify: flex-start, $direction: column);
+
+  align-items: stretch;
+}
+.flex-col-end-s {
+  @include flex($justify: flex-end, $direction: column);
+
+  align-items: stretch;
+}
+.flex-col-center-s {
+  @include flex($justify: center, $direction: column);
+
+  align-items: stretch;
+}
