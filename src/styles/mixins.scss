@@ -8,7 +8,7 @@
 }
 
 // 按钮
-@mixin btn ($bg: #448ACA, $txt-color: #ffffff, $width: 100%, $fontSize: 14px) {
+@mixin btn ($bg: #448ACA, $txt-color: #fff, $width: 100%, $fontSize: 14px) {
   text-align: center;
   background: $bg;
   color: $txt-color;

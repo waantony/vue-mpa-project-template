@@ -1,7 +1,7 @@
 {
   "name": "vue-mpa-project-template",
   "version": "0.1.0",
-  "description": "Vue 多页应用项目架构模版，基于：vue-cli@4, vue@2, vue-router@3, vuex@3, sass(scss), eslint, stylelint, babel, postcss-px2rem",
+  "description": "Vue 多页应用移动端 H5 项目架构模版，基于：vue-cli@4, vue@2, vue-router@3, vuex@3, sass(scss), eslint, stylelint, babel, postcss-pxtorem",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.5",
     "node-sass": "^4.14.1",
-    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^5.1.1",
     "sass-loader": "^8.0.2",
     "style-resources-loader": "^1.3.3",
     "stylelint": "^13.6.1",

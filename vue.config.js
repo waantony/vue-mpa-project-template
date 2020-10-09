@@ -1,10 +1,8 @@
-// node modules
 const path = require('path')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-const px2rem = require('postcss-px2rem')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const pxtorem = require('postcss-pxtorem')
 
-// local modules
 const getPages = require('./configs/getPages')
 
 // 环境变量获取
@@ -18,11 +16,18 @@ const pathJoin = dir => path.join(__dirname, dir)
 
 module.exports = {
   pages: getPages('src/pages/*'), // 多页配置
-  lintOnSave: false,
+  lintOnSave: 'warning',
   publicPath: './',
   outputDir: 'dist',
   productionSourceMap: false,
   configureWebpack (config) {
+
+    config.resolve = {
+      extensions: ['.js', '.vue', '.json'],
+      alias: {
+        '@': pathJoin('src'),
+      },
+    }
 
     // 从外部引入的库，比如在 index.html 中引入 cdn 地址
     config.externals = {
@@ -32,7 +37,7 @@ module.exports = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      // 'axios': 'axios',
+      'axios': 'axios',
       'vant': 'vant',
       // 'BMap': 'BMap',
       // 'echarts': 'echarts',
@@ -67,12 +72,6 @@ module.exports = {
       // 修改 cacheGroups 配置
       // require('./configs/cacheGroups')(config)
     }
-    config.resolve = {
-      extensions: ['.js', '.vue', '.json'],
-      alias: {
-        '@': pathJoin('src'),
-      },
-    }
   },
   // webpack chain
   chainWebpack (config) {
@@ -106,8 +105,9 @@ module.exports = {
     loaderOptions: {
       postcss: {
         plugins: [
-          px2rem({
-            remUnit: 100,
+          pxtorem({
+            rootValue: 100,
+            propList: ['*'],
           }),
         ],
       },
