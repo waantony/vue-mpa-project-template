@@ -1,7 +1,11 @@
+# custom
+/dist
+dist
+output.js
+
 .DS_Store
 node_modules
-/dist
-dist/
+
 # local env files
 .env.local
 .env.*.local
