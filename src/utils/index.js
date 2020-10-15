@@ -49,3 +49,18 @@ export const deepFreeze = obj => {
 //     }
 //   })
 // }
+
+export const getRandomNumber = (start, end) => Number.parseInt((Math.random() * (end - start)) + start)
+
+export const getUniqueKey = (length = 16) => {
+  const num = '0123456789'
+  const lowercase = 'abcdefghijklmnopqrstuvwxyz'
+  const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const chars = `${num}${lowercase}${uppercase}`
+  const end = chars.length
+  let result = ''
+  for (let i = 0; i < length; i++) {
+    result += chars[getRandomNumber(0, end)]
+  }
+  return result
+}
